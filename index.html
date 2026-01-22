@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swaranjali Mohite | My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* ===== Global CSS ===== */
+        body {
+            scroll-behavior: smooth;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h2 {
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        section {
+            padding-top: 80px;
+        }
+
+        /* ===== Navbar ===== */
+        .navbar {
+            box-shadow: 0 4px 20px hsla(0, 8%, 47%, 0.3);
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #ce9c06 !important;
+        }
+/* Navbar background */
+.navbar {
+    background: linear-gradient(90deg, #272728, #080808);
+    padding: 15px 0;
+}
+
+/* Navbar links */
+.navbar a {
+    color: #ffffff;
+    font-weight: 700;   /* BOLD text */
+    font-size: 18px;
+    margin: 0 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Hover color change */
+.navbar a:hover {
+    color: #b08e05;     /* Yellow on hover */
+    transform: scale(1.1);
+}
+
+/* Active link (current page) */
+.navbar a.active {
+    color: #00ffcc;     /* Highlight color */
+    border-bottom: 2px solid #00ffcc;
+}
+        /* ===== Hero Section ===== */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(to right, #724b9b, #373ea1);
+            color: rgb(237, 232, 232);
+        }
+
+        .hero img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border: 3px solid rgb(77, 75, 113);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+   .name-color {
+    background: linear-gradient(90deg, #ffcc00, #ff6a00, #ffcc00);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+    animation: nameGlow 3s linear infinite;
+}
+@keyframes nameGlow {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+}
+.role {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+#typing-text {
+    color: #efe4e4;
+    border-right: 8px solid #b2054a;
+    padding-right: 10px;
+    animation: blinkCursor 0.8s infinite;
+}
+
+@keyframes blinkCursor {
+    0% { border-color: transparent; }
+    50% { border-color: #ffd700; }
+    100% { border-color: transparent; }
+}
+        .hero h1 {
+            font-size: 3rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .hero .btn {
+            padding: 10px 30px;
+            font-size: 18px;
+            border-radius: 30px;
+        }
+
+        /* ===== About Section ===== */
+        #about p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 18px;
+            color: #101010;
+        }
+        #about {
+            background-color: #a9b7c1;
+        }
+        /* ===== Skills Section ===== */
+        #skills {
+            background-color: #29c2ba;
+        }
+
+        #skills .card {
+            min-height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-align: center;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            background: rgb(211, 198, 12);
+        }
+
+        #skills .card:hover {
+            transform: translateY(-10px) scale(1.05);
+            background: linear-gradient(to right, #2575fc, #6a11cb);
+            color: white;
+        }
+
+        /* ===== Projects Section ===== */
+        #projects {
+            background-color: #74aa8b;
+        }
+        #projects .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(222, 102, 102, 0.15);
+            transition: all 0.3s ease;
+             background: linear-gradient(to right, #2575fc, #6a11cb);
+            color: rgb(222, 221, 222);
+        }
+
+        #projects .card:hover {
+            transform: translateY(-10px);
+
+        }
+
+        #projects .card-title {
+            font-weight: 600;
+        }
+.certificate-section {
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.certificate-section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.certificate-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.certificate-card {
+  background: #abba82;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.certificate-card:hover {
+  transform: translateY(-8px);
+}
+
+.certificate-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.certificate-card h3 {
+  margin: 15px 0 5px;
+  color: #0555cd;
+}
+
+.certificate-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+.certificate-card a {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #884949;
+  background-color: #8094b3;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.certificate-card a:hover {
+  background-color: #81a932;
+}
+        /* ===== Contact Section ===== */
+        #contact {
+            background: linear-gradient(to right, #232526, #263d54);
+        }
+
+        #contact .form-control {
+            border-radius: 10px;
+            padding: 12px;
+            border: none;
+        }
+
+        #contact .form-control:focus {
+            box-shadow: 0 0 10px rgba(255,255,255,0.5);
+        }
+
+        #contact textarea {
+            resize: none;
+        }
+
+        #contact button {
+            border-radius: 25px;
+            font-size: 18px;
+            padding: 10px;
+            font-weight: 600;
+        }
+
+        /* ===== Footer ===== */
+        footer {
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Swaranjali Mohite</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#certificates">Certificate</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Home Section -->
+<section id="home" class="hero d-flex align-items-center">
+    <div class="container text-center">
+        <img src="images\profile.jpg" alt="Profile" class="mb-3">
+        <h1>Hi, I'm <span class="name-color">Swaranjali Mohite</span></h1>
+       <p class="role"><span id="typing-text"></span></p>
+        <p>Web Developer With a foucus on building modern, scalable and responsive websites.</p>
+        <a href="pdf\resume.pdf" target="_blank"><button>View Resume</button></a>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">About Me</h2>
+        <p class="text-center">
+            I am a passionate MCA student with interest in web development,
+            programming, databases, and learning new technologies.My academic background in computer science has given me solid foundation in programming(java,.net),web technologies,and databases management System
+            My career aspiration is to work in the IT sector,especially in the areas like software development,cloud computing,and data-driven application.
+            I believe in continuous learning and self-growth,and I am actively improving my technical expertise while building strong soft skills such as communication,adaptability,and collaboration.
+        </p>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">My Skills</h2>
+        <div class="row text-center">
+            <div class="col-md-3 col-sm-6 mb-3"><div class="card p-3">HTML/CSS</div></div>
+            <div class="col-md-3 col-sm-6 mb-3"><div class="card p-3">Bootstrap</div></div>
+            <div class="col-md-3 col-sm-6 mb-3"><div class="card p-3">.NET</div></div>
+            <div class="col-md-3 col-sm-6 mb-3"><div class="card p-3">Java</div></div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Projects</h2>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 1</h5>
+                        <p class="card-text">Online Movie Ticket Booking System.</p>
+                         <p class="card-text">ASP.NET CURD-based system</p>
+ </div>
+     </div>
+         </div>
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 2</h5>
+                        <p class="card-text">Portfolio Website using Bootstrap.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 3</h5>
+                        <p class="card-text">Movie  Booking System.</p>
+                        <p class="card-text">PHP-based platform.</p>
+                    </div>
+        </div>
+    </div>
+        </div>
+     </div>
+</section>
+<section class="certificate-section" id="certificates">
+  <h2>Certificates</h2>
+  <div class="certificate-container">
+    <div class="certificate-card">
+      <img src="images\aws.jpeg" alt="Certificate 1">
+      <h3>AWS Academy Graduate -Cloud Foundation-training Badge</h3>
+      <p>Issued by AWS Academy </p>
+      <a href="images\aws.jpeg" class="btn btn-primary">View Certificate</a>
+      
+    </div>
+
+    <div class="certificate-card">
+      <img src="images\sql.jpeg" alt="Certificate 2">
+      <h3>SQL and Relational Databases 101</h3>
+      <p>Issued by IBM</p>
+      <a href="images\sql.jpeg" class="btn btn-primary">View Certificate</a>
+    </div>
+
+    <div class="certificate-card">
+      <img src="images\powerbi.jpeg" alt="Certificate 3">
+      <h3>Power BI Data Modelling</h3>
+      <p>Issued by Microsoft</p>
+      <a href="images\powerbi.jpeg" class="btn btn-primary">View Certificate</a>
+    </div>
+  </div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="py-5 text-white">
+    <div class="container">
+        <h2 class="text-center mb-4">Contact Me</h2>
+        <div class="row justify-content-center">
+        <div class="col-md-6">
+       <p>Email: <a href="mailto:mohiteswaranjali6@email.com">swaranjali6@email.com</a></p>
+       <p>LinkedIn: <a href="#">linkedin.com/in/swaranjali-mohite</a></p>
+       <p>Github: <a href="#">Github.com/in/swaranjali krishnat mohite</a></p>
+  </div>
+  </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center py-3 bg-secondary text-white">
+    © 2026 Swaranjali Mohite | Portfolio
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Typing Animation Script -->
+<script>
+    const texts = [
+        "💻 Web Developer",
+        "🎓 Student",
+        "🎨 Designer"
+    ];
+
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function typingAnimation() {
+        const element = document.getElementById("typing-text");
+        const currentText = texts[textIndex];
+
+        if (!isDeleting) {
+            element.textContent = currentText.substring(0, charIndex + 1);
+            charIndex++;
+        } else {
+            element.textContent = currentText.substring(0, charIndex - 1);
+            charIndex--;
+        }
+
+        if (!isDeleting && charIndex === currentText.length) {
+            setTimeout(() => isDeleting = true, 1200);
+        }
+
+        if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            textIndex = (textIndex + 1) % texts.length;
+        }
+
+        setTimeout(typingAnimation, isDeleting ? 70 : 120);
+    }
+
+    typingAnimation();
+</script>
+</body>
+</html>
